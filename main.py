@@ -29,6 +29,8 @@ def lambda_handler(event, context):
                              decode_responses=True, ssl=True, ssl_cert_reqs="none"
                              )
     client_dev.ping()
+    print("Connected to Redis")
+    print("redis client", client_dev)
 
     return {
         'statusCode': 200,
