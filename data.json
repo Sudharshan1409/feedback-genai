@@ -1,0 +1,218 @@
+[
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "demo",
+        "feedback": {
+            "productivity": "2",
+            "positiveEnergy": "4",
+            "reliability": "3"
+        },
+        "feedback_content": "Sandy, I want to discuss some areas in your recent project where there\u2019s room for improvement. I've noticed some missed deadlines and a few inaccuracies in the monthly reports which have led to setbacks in our team\u2019s schedule. It's important to ensure that all information is double-checked and submitted on time. I know you have the capability to handle these tasks well, as you've shown in previous projects. ",
+        "createdAt": "2024-05-02T12:28:45.147Z",
+        "readable_createdAt": "2024-05-02 12:28:45"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "demo",
+        "feedback": {
+            "productivity": "2",
+            "positiveEnergy": "3",
+            "reliability": "2"
+        },
+        "feedback_content": "Sandy, we need to address the recent issues with your work performance directly. The missed deadlines and errors in the monthly reports are unacceptable and have compromised our team's ability to meet its objectives. We've discussed the importance of accuracy and punctuality before, yet these problems persist. It is critical that you immediately improve your performance in these areas. Let's be clear: further failure to meet expectations will result in more severe consequences.",
+        "createdAt": "2024-05-02T12:30:08.776Z",
+        "readable_createdAt": "2024-05-02 12:30:08"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "OnLeave Retro",
+        "feedback": {
+            "productivity": "3",
+            "positiveEnergy": "2",
+            "reliability": "4"
+        },
+        "feedback_content": "PR review is fast, but still working too much in many things which confuses him alot while reviewing the PR.\n\n** Just adding something as it's not taking it as feedback",
+        "createdAt": "2024-01-10T10:53:20.771Z",
+        "readable_createdAt": "2024-01-10 10:53:20"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "OnLeave Retro",
+        "feedback": {
+            "productivity": "5",
+            "positiveEnergy": "4",
+            "reliability": "4"
+        },
+        "feedback_content": "always occupied with multiple tasks, but still somehow manages to prioritize and allocate time for all the tasks. great technical knowledge and leadership, however needs to focus on context switching",
+        "createdAt": "2024-02-20T05:49:52.980Z",
+        "readable_createdAt": "2024-02-20 05:49:52"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "test-onleave",
+        "feedback": {
+            "productivity": "3",
+            "positiveEnergy": "3",
+            "reliability": "4"
+        },
+        "feedback_content": "It has been working with Rahul Kumar, he has great knowledge of the overall application. However a little more involvement is expected from him.",
+        "createdAt": "2023-12-29T09:52:38.039Z",
+        "readable_createdAt": "2023-12-29 09:52:38"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 4,
+            "positiveEnergy": 5,
+            "reliability": 5
+        },
+        "feedback_content": "Sandy was very reliable in this sprint. He delved into the solution with depth and detail, addressing and covering missing edge cases. His proactive mindset extends to other tickets he is not directly working on, showcasing his positive dedication to the project and motivating everyone to make meaningful contributions",
+        "createdAt": "2023-12-19T11:33:29.609Z",
+        "readable_createdAt": "2023-12-19 11:33:29"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "Test 3",
+        "feedback": {
+            "productivity": "5",
+            "positiveEnergy": "5",
+            "reliability": "5"
+        },
+        "feedback_content": "The positive energy you bring to the team is invaluable, creating a positive and collaborative work environment. Your reliability in consistently delivering results and your impressive productivity make you a reliable and highly valued team member.",
+        "createdAt": "2024-02-06T07:52:23.269Z",
+        "readable_createdAt": "2024-02-06 07:52:23"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "Test 3",
+        "feedback": {
+            "productivity": "5",
+            "positiveEnergy": "5",
+            "reliability": "5"
+        },
+        "feedback_content": "The positive energy you bring to the team is invaluable, creating a positive and collaborative work environment. Your reliability in consistently delivering results and your impressive productivity make you a reliable and highly valued team member.",
+        "createdAt": "2024-02-06T07:44:01.448Z",
+        "readable_createdAt": "2024-02-06 07:44:01"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "Test 3",
+        "feedback": {
+            "productivity": "5",
+            "positiveEnergy": "5",
+            "reliability": "5"
+        },
+        "feedback_content": "The positive energy you bring to the team is invaluable, creating a positive and collaborative work environment. Your reliability in consistently delivering results and your impressive productivity make you a reliable and highly valued team member.",
+        "createdAt": "2024-02-06T07:43:17.554Z",
+        "readable_createdAt": "2024-02-06 07:43:17"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 4,
+            "positiveEnergy": 5,
+            "reliability": 5
+        },
+        "feedback_content": "Sandy was very reliable in this sprint. He delved into the solution with depth and detail, addressing and covering missing edge cases. His proactive mindset extends to other tickets he is not directly working on, showcasing his positive dedication to the project and motivating everyone to make meaningful contributions",
+        "createdAt": "2023-12-19T11:33:57.485Z",
+        "readable_createdAt": "2023-12-19 11:33:57"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 5,
+            "positiveEnergy": 5,
+            "reliability": 4
+        },
+        "feedback_content": "Nicely handled and managed code. Nice demo given on Monday, It was so nicely explained every step of how the functionality works, I liked the demo.",
+        "createdAt": "2023-12-19T12:19:01.703Z",
+        "readable_createdAt": "2023-12-19 12:19:01"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 5,
+            "positiveEnergy": 3,
+            "reliability": 4
+        },
+        "feedback_content": "Sandy, as the lead is managing the backend very well and also making sure to consider the frontend work and flexibility to implement them.",
+        "createdAt": "2023-12-19T13:10:12.234Z",
+        "readable_createdAt": "2023-12-19 13:10:12"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 4,
+            "positiveEnergy": 5,
+            "reliability": 5
+        },
+        "feedback_content": "Sandy was very reliable in this sprint. He delved into the solution with depth and detail, addressing and covering missing edge cases. His proactive mindset extends to other tickets he is not directly working on, showcasing his positive dedication to the project and motivating everyone to make meaningful contributions",
+        "createdAt": "2023-12-19T11:33:29.609Z",
+        "readable_createdAt": "2023-12-19 11:33:29"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "Test 3",
+        "feedback": {
+            "productivity": "5",
+            "positiveEnergy": "5",
+            "reliability": "5"
+        },
+        "feedback_content": "The positive energy you bring to the team is invaluable, creating a positive and collaborative work environment. Your reliability in consistently delivering results and your impressive productivity make you a reliable and highly valued team member.",
+        "createdAt": "2024-02-06T07:52:23.269Z",
+        "readable_createdAt": "2024-02-06 07:52:23"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 4,
+            "positiveEnergy": 5,
+            "reliability": 5
+        },
+        "feedback_content": "Sandy was very reliable in this sprint. He delved into the solution with depth and detail, addressing and covering missing edge cases. His proactive mindset extends to other tickets he is not directly working on, showcasing his positive dedication to the project and motivating everyone to make meaningful contributions",
+        "createdAt": "2023-12-19T11:33:57.485Z",
+        "readable_createdAt": "2023-12-19 11:33:57"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 5,
+            "positiveEnergy": 5,
+            "reliability": 4
+        },
+        "feedback_content": "Nicely handled and managed code. Nice demo given on Monday, It was so nicely explained every step of how the functionality works, I liked the demo.",
+        "createdAt": "2023-12-19T12:19:01.703Z",
+        "readable_createdAt": "2023-12-19 12:19:01"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "Test 3",
+        "feedback": {
+            "productivity": "5",
+            "positiveEnergy": "5",
+            "reliability": "5"
+        },
+        "feedback_content": "The positive energy you bring to the team is invaluable, creating a positive and collaborative work environment. Your reliability in consistently delivering results and your impressive productivity make you a reliable and highly valued team member.",
+        "createdAt": "2024-02-06T07:39:15.063Z",
+        "readable_createdAt": "2024-02-06 07:39:15"
+    },
+    {
+        "email": "sandeep@antstack.io",
+        "projectName": "feedback-test-2",
+        "feedback": {
+            "productivity": 5,
+            "positiveEnergy": 3,
+            "reliability": 4
+        },
+        "feedback_content": "Sandy, as the lead is managing the backend very well and also making sure to consider the frontend work and flexibility to implement them.",
+        "createdAt": "2023-12-19T13:10:12.234Z",
+        "readable_createdAt": "2023-12-19 13:10:12"
+    }
+]
