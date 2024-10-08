@@ -110,11 +110,10 @@ def lambda_handler(event, context):
         print('question = ' + product.question)
         print('answer = ' + product.answer)
 
-
-return {
-    'statusCode': 200,
-    'body': json.dumps('Hello from Lambda!')
-}
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
 
 
 if __name__ == "__main__":
