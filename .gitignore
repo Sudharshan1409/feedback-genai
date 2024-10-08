@@ -2,4 +2,4 @@ lambda_function/*
 lambda_function.zip
 feedback.pem
 venv
-amazon-pqa
+amazon-pqa/*
