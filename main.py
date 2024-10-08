@@ -7,6 +7,7 @@ from redis.commands.search.field import TagField
 from redis.commands.search.query import Query
 from redis.commands.search.result import Result
 import json
+import pandas as pd
 
 
 def get_embedding(text, client, model="text-embedding-ada-002"):
@@ -22,6 +23,19 @@ def get_embedding(text, client, model="text-embedding-ada-002"):
         return None
 
 
+def load_pqa(file_name, number_rows=1000):
+    df = pd.DataFrame(columns=('question', 'answer'))
+    with open(file_name) as f:
+        i = 0
+        for line in f:
+            data = json.loads(line)
+            df.loc[i] = [data['question_text'], data['answers'][0]['answer_text']]
+            i += 1
+            if (i == number_rows):
+                break
+    return df
+
+
 def lambda_handler(event, context):
     # TODO implement
 
@@ -31,6 +45,9 @@ def lambda_handler(event, context):
     client_dev.ping()
     print("Connected to Redis")
     print("redis client", client_dev)
+    qa_list = load_pqa('amazon-pqa/amazon_pqa_headsets.json', number_rows=1000)
+    print("Loaded QA pairs")
+    print(qa_list.head())
 
     return {
         'statusCode': 200,
