@@ -84,7 +84,7 @@ def lambda_handler(event, context):
     item_keywords_vectors = [model.encode(sentence) for sentence in item_keywords]
     # create_hnsw_index(client_dev, INDEX_NAME, NUMBER_PRODUCTS)
     print('Loading and Indexing + ' + str(NUMBER_PRODUCTS) + ' products')
-    load_vectors(client_dev, product_metadata, item_keywords_vectors, ITEM_KEYWORD_EMBEDDING_FIELD)
+    load_vectors(client_dev, product_metadata, item_keywords_vectors, ITEM_KEYWORD_EMBEDDING_FIELD, product_metadata)
     info = client_dev.ft(INDEX_NAME).info()
     num_docs = info['num_docs']
     space_usage = info['space_usage']
