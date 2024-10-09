@@ -3,3 +3,4 @@ lambda_function.zip
 feedback.pem
 venv
 amazon-pqa/*
+creds.json

@@ -1,4 +1,4 @@
-# from openai import OpenAI
+from openai import OpenAI
 import numpy as np
 from redis.commands.search.field import VectorField
 from redis.commands.search.field import TextField
@@ -9,13 +9,14 @@ import redis
 from redis.client import Redis
 import pandas as pd
 import json
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('sentence-transformers/all-distilroberta-v1')
-client_dev = redis.Redis(host='clustercfg.feedback-cluster.pu3xxp.memorydb.ap-south-1.amazonaws.com',
-                         port=6379, decode_responses=True, ssl=True, ssl_cert_reqs="none")
-client_dev.ping()
+memory_db_client = redis.Redis(host='clustercfg.feedback-cluster.pu3xxp.memorydb.ap-south-1.amazonaws.com',
+                               port=6379, decode_responses=True, ssl=True, ssl_cert_reqs="none")
+memory_db_client.ping()
+with open('creds.json') as f:
+    creds = json.load(f)
+    openai_client = OpenAI(api_key=creds['openai_api_key'])
 print("Connected to Redis")
-print("redis client", client_dev)
+print("redis client", memory_db_client)
 NUMBER_PRODUCTS = 1000
 INDEX_NAME = 'indx:pqa_vss'
 TEXT_EMBEDDING_DIMENSION = 768
@@ -57,14 +58,13 @@ def load_vectors(client: Redis, qa_list, vector_dict, vector_field_name, product
         item_metadata = product_metadata[index]
         item_keywords_vector = vector_dict[index].astype(np.float32).tobytes()
         item_metadata[vector_field_name] = item_keywords_vector
-        print("item_metadata", item_metadata)
 
         # HSET
         client.hset(key, mapping=item_metadata)
 
 
 def create_hnsw_index(create_hnsw_index, vector_field_name, number_of_vectors, vector_dimensions=768, distance_metric='L2', M=40, EF=200):
-    client_dev.ft(INDEX_NAME).create_index([
+    memory_db_client.ft(INDEX_NAME).create_index([
         VectorField("question_vector", "HNSW", {"TYPE": "FLOAT32", "DIM": vector_dimensions,
                     "DISTANCE_METRIC": distance_metric, "INITIAL_CAP": number_of_vectors, "M": M, }),
         TextField("question"),
@@ -85,8 +85,9 @@ def lambda_handler(event, context):
     item_keywords_vectors = [model.encode(sentence) for sentence in item_keywords]
     # create_hnsw_index(client_dev, INDEX_NAME, NUMBER_PRODUCTS)
     print('Loading and Indexing + ' + str(NUMBER_PRODUCTS) + ' products')
-    load_vectors(client_dev, product_metadata, item_keywords_vectors, ITEM_KEYWORD_EMBEDDING_FIELD, product_metadata)
-    info = client_dev.ft(INDEX_NAME).info()
+    load_vectors(memory_db_client, product_metadata, item_keywords_vectors,
+                 ITEM_KEYWORD_EMBEDDING_FIELD, product_metadata)
+    info = memory_db_client.ft(INDEX_NAME).info()
     num_docs = info['num_docs']
     space_usage = info['space_usage']
     num_indexed_vectors = info['num_indexed_vectors']
@@ -104,7 +105,7 @@ def lambda_handler(event, context):
     params_dict = {"vec_param": query_vector}
 
 # Execute the query
-    results = client_dev.ft(INDEX_NAME).search(q, query_params=params_dict)
+    results = memory_db_client.ft(INDEX_NAME).search(q, query_params=params_dict)
     # Print similar products and questions found
     for product in results.docs:
         print('***************Product  found ************')
